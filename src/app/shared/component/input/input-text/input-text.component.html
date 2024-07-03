@@ -1,0 +1,16 @@
+<div class="flex align-center">
+  <input class="w-4/5 text-[1.25rem] text-sky-700 font-bold outline-none bg-gray-200 border border-solid border-b-gray-500"
+    [type]="inputType"
+    [placeholder]="placeHolder"
+    (input)="setValue($event)">
+  <div class="w-6 h-6 mx-2"><i class="fas scale-x-[-1]" [class]="txHidden ? 'fa-eye-slash' : 'fa-eye'" (click)="switchType()"></i></div>
+  <div *ngIf="showInfoIcon" class="w-6 h-6 mx-2" (click)="openAcconutInfo()">i</div>
+</div>
+<div class="h-8" >
+  <p *ngIf="
+    formGroup.get(formControlName)?.invalid &&
+    (formGroup.get(formControlName)?.dirty ||
+    formGroup.get(formControlName)?.touched) &&
+    controls.errors"
+    class="text-red-600">{{controls.errors['message']}}</p>
+</div>

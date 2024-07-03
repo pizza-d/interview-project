@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="bg-gray-200 p-4 absolute w-full h-full" [formGroup]="formGroup">
+  <div class="text-sky-700 text-[2.75rem] my-4">會員登入</div>
+  <app-input-text [formGroup]="formGroup" formControlName="account" [placeHolder]="'請輸入帳號'" (infoEvent)="openAcconutInfo()" (hideEvent)="null"></app-input-text>
+  <app-input-text [formGroup]="formGroup" formControlName="username" [placeHolder]="'請輸入使用者名稱'" (infoEvent)="openUserInfo()"></app-input-text>
+  <app-input-text [formGroup]="formGroup" formControlName="password" [placeHolder]="'請輸入密碼'" [showInfoIcon]="false"></app-input-text>
+
+  <div class="flex justify-between pb-6">
+    <label>
+      <input type="checkbox">
+      記住登入帳號
+    </label>
+    <div class="text-sky-700 font-bold">
+      設定簡易登入
+    </div>
+  </div>
+
+  <div class="bg-blue-400 text-center py-3 text-lg text-white mb-6" (click)="btnLogin()">登入</div>
+  <div class="bg-gray-300 text-center py-3 text-lg text-gray-500 font-bold mb-6" (click)="goSetUserName()">我要設定使用者名稱</div>
+
+  <div class="flex justify-between pb-6">
+    <div class="text-sky-700 font-bold">
+      我要註冊
+    </div>
+    <div class="text-sky-700 font-bold">
+      忘記使用者名稱或密碼
+    </div>
+  </div>
+</div>

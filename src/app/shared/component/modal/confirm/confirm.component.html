@@ -1,0 +1,10 @@
+<div class="w-2/3 bg-white fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[1000]">
+  <div class="pt-8  px-8">
+    <p class="font-bold text-center pb-8 text-xl">{{ data.title }}</p>
+    <p class="font-bold text-center pb-8">{{ data.content }}</p>
+  </div>
+  <div class="flex">
+    <button class="w-1/2 bg-gray-300 text-center py-3 text-lg text-gray-500 font-bold" (click)="close(false)">關閉</button>
+    <button class="w-1/2 bg-blue-400 text-center py-3 text-lg text-white" (click)="close(true)">前往設定</button>
+  </div>
+</div>

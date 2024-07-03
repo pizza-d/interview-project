@@ -1,0 +1,9 @@
+<div class="w-2/3 bg-white fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] z-[1000]">
+  <div class="pt-8  px-8">
+    <p *ngIf="data.title" class="font-bold text-center pb-8 text-xl">{{ data.title }}</p>
+    <p class="font-bold text-center pb-8">{{ data.content }}</p>
+  </div>
+  <div class="flex">
+    <button class="w-full bg-blue-400 text-center py-3 text-lg text-white" (click)="close()">關閉</button>
+  </div>
+</div>
